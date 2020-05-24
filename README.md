@@ -8,14 +8,14 @@ images which has screenshots used in report.
 
 In order to run successfully the script following dependencies are needed:
 
-1.System.Collections.Generic;
-2.System.Text;
-3.System.Net.Http;
-4.System.Net.Http.Headers;
-5.System.Threading.Tasks;
-6.Newtonsoft.Json;
-7.Newtonsoft.Json.Linq;
-8.NUnit.Framework;
+1. System.Collections.Generic;
+2. System.Text;
+3. System.Net.Http;
+4. System.Net.Http.Headers;
+5. System.Threading.Tasks;
+6. Newtonsoft.Json;
+7. Newtonsoft.Json.Linq;
+8. NUnit.Framework;
 
 Nunit Framework version="3.12.0", NUnit3TestAdapter version="3.16.1" and Newtonsoft version="12.0.3" should be installed and added to the project.
 In Visual Studio you can install package by going to Tools -> NuGet Packet Manager -> Manage NuGet Packages for Solutions like in figures below.
