@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Author Tolulope Ademilua.   
+// Arvato.   
+// Created on 24.05.2020
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Net.Http;
@@ -117,6 +121,10 @@ namespace API_Task
         [Test]
         public async Task incorrectToken()
         {
+            /*This test case has following test scenario:
+                 Valid IBAN account and incorrect token are sent to correct API.
+                 HTTP 401 or Unauthorized status is returned and message attribute has value as "Authorization has been denied for this request" in response Body
+                */
             using (var client = new HttpClient())
             {
                 var header = "application/json";
@@ -147,6 +155,10 @@ namespace API_Task
         [Test]
         public async Task incorrectIban()
         {
+                /*This test case has the following test scenario:
+                 Incorrect IBAN of bank account with shorter length and incorrect token are sent to correct API.
+                 HTTP 400 or BadRequest status is returned and type attribute has value as "BussinessError" in response Body
+               */
             using (var client = new HttpClient())
             {
                 var header = "application/json";
@@ -155,7 +167,7 @@ namespace API_Task
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Add("X-Auth-Key", "Q7DaxRnFls6IpwSW1SQ2FaTFOf7UdReAFNoKY68L"); 
                 var bankAccountDic = new Dictionary<string, string>{
-                    { "bankAccount", "123"} // IBAN is Incorrect
+                    { "bankAccount", "123"} // IBAN is Incorrect and bank account has shorter length
                 };
                 var json = JsonConvert.SerializeObject(bankAccountDic, Formatting.Indented);
                 var stringContent = new StringContent(json, Encoding.UTF8, header);
@@ -178,6 +190,10 @@ namespace API_Task
         [Test]
         public async Task missingIban()
         {
+               /*This test case has the following test scenario:
+                 Missing IBAN and correct token are sent to correct API.
+                 HTTP 400 or BadRequest status is returned and type attribute has value as "BussinessError" in response Body
+               */
             using (var client = new HttpClient())
             {
                 var header = "application/json";
@@ -186,7 +202,7 @@ namespace API_Task
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(header));
                 client.DefaultRequestHeaders.Add("X-Auth-Key", "Q7DaxRnFls6IpwSW1SQ2FaTFOf7UdReAFNoKY68L");
                  var bankAccountDic = new Dictionary<string, string>{
-                    { "bankAccount", ""} // IBAN is Empty
+                    { "bankAccount", ""} // IBAN is missing
                 };
                 var json = JsonConvert.SerializeObject(bankAccountDic, Formatting.Indented);
                 var stringContent = new StringContent(json, Encoding.UTF8, header);
@@ -209,6 +225,10 @@ namespace API_Task
         [Test]
         public async Task notIbanFormat()
         {
+            /*This test case has the following test scenario:
+              credit card which is not in IBAN format and correct token are sent to correct API.
+              HTTP 200 or OK status is returned and isValid attribute has value as "False" in response Body
+            */
             using (var client = new HttpClient())
             {
                 var header = "application/json";

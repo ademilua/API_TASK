@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Author Tolulope Ademilua.   
+// Arvato.   
+// Created on 24.05.2020
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,14 +13,8 @@ using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
-
 namespace API_Task
 {
-    /*public class bank_account
-    {
-        public string token { get; set; }
-        public string bankAccount { get; set; }
-    }*/
     class Program
     {
         static void Main(string[] args)
