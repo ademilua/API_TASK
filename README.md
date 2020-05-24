@@ -21,6 +21,10 @@ In Visual Studio you can add package by going to Tools -> NuGet Packet Manager -
 
 After installing necessary packages you can run the code in Test Suite by following link https://github.com/ademilua/API_TASK/blob/master/API_Task/API_Task/Test_Suite.cs
 
+If you faced with build issue then you need to right click on the project name then go to property and untick Prefer 32-bit.
+After that you might need to also change the CPU architecture to x64. In order to do that go to Test -> Test Settings -> Default processor archictecture -> x64 like in figure below.
+![Processor architecture](https://github.com/ademilua/API_TASK/blob/master/images/8.PNG)
+
 Test Suites has 7 Test Cases which covers Positive and Negative cases related to The API based on specification document.
 Test Cases are following:
 1. First test case verifies positive case of getting HTTP 200 and isValid attribute having True Value. 
@@ -42,10 +46,12 @@ All test cases are passed like displayed in figure below:
 
 NOTES:
 
-Estonian IBAN is generated EE474554454545454545 by using the following online tool https://bank.codes/iban/generate/estonia/ and tested by using POSTMAN tool. Based on specification document the IBAN supposed to be invalid and return False but instead it returned True value. 
-
+Estonian IBAN is generated EE474554454545454545 by using the following online tool https://bank.codes/iban/generate/estonia/ and tested by using POSTMAN tool. Based on specification document the IBAN supposed to be invalid and return False but instead it returned True value like in figures below.
 
 ![POSTMAN](https://github.com/ademilua/API_TASK/blob/master/images/5.PNG)
 ![List Of Countries](https://github.com/ademilua/API_TASK/blob/master/images/6.PNG)
+
+In addition, “riskCheckMessages” are not tested because of lack of information in specification document. 
+Since it was not specified what parameters are affecting those values in “riskCheckMessages”.
 
 
