@@ -3,7 +3,7 @@
 ## Steps
 
 This project is aimed to test API endpoint under https://api-test.afterpay.dev/
-The project contains two folders, one of them is API_Task which has all the code for testing of the API endpoint and folder called
+the project contains two folders, one of them is API_Task which has all the code for testing of the API endpoint and folder called
 images which has screenshots used in report.
 
 In order to run successfully the script following dependencies are needed:
