@@ -3,7 +3,7 @@
 ## Steps
 
 This project is aimed to test API endpoint under https://api-test.afterpay.dev/
-The project contains two folders, one of them is API_Task which has all the code for testing of the API endpoint and folder called
+the project contains two folders, one of them is API_Task which has all the code for testing of the API endpoint and folder called
 images which has screenshots used in report.
 
 In order to run successfully the script following dependencies are needed:
@@ -26,8 +26,8 @@ After installing necessary packages you can run the code in Test Suite by follow
 If you faced with build issue then you need to right click on the project name then go to property and untick Prefer 32-bit.
 ![untick 32-bit](https://github.com/ademilua/API_TASK/blob/master/images/7.PNG)
 
-After that you might need to also change the CPU architecture to x64. In order to do that go to Test -> Test Settings -> Default processor archictecture -> x64 like in figure below.
-![Processor architecture](https://github.com/ademilua/API_TASK/blob/master/images/8.PNG)
+After that you might need to also change the CPU architecture to x64. In order to do that go to Test -> Test Settings -> Default Processor Archictecture -> x64 like in figure below.
+![Processor architecture](https://github.com/ademilua/API_TASK/blob/master/images/8.png)
 
 ## Test Suite
 
