@@ -19,7 +19,7 @@ In order to run successfully the script following dependencies are needed:
 
 Nunit Framework version="3.12.0", NUnit3TestAdapter version="3.16.1" and Newtonsoft version="12.0.3" should be installed and added to the project.
 In Visual Studio you can install package by going to Tools -> NuGet Packet Manager -> Manage NuGet Packages for Solutions like in figures below.
-![Installing Packages](https://github.com/ademilua/API_TASK/blob/master/images/2.PNG)
+![Installing Packages](https://github.com/ademilua/API_TASK/blob/master/images/4.PNG)
 
 After installing necessary packages you can run the code in Test Suite by following link https://github.com/ademilua/API_TASK/blob/master/API_Task/API_Task/Test_Suite.cs
 
